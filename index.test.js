@@ -97,7 +97,7 @@ describe("sizeMeUp()", () => {
   it('should return "Too small" if the number is less than 10', () => {
     expect(sizeMeUp(1)).toBe("Too small");
   });
-  it('should return "Damn Foley!!" if the number is greater than 10', () => {
+  it('should return "Damn Foley!!" if the number is greater than or equal to 10', () => {
     expect(sizeMeUp(11)).toBe("Damn Foley!!");
   });
 });
