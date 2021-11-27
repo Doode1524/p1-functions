@@ -12,7 +12,7 @@ const {
 // const functions = require('./index.js');
 
 describe("greet()", () => {
-  it("should have one argument", () => {
+  it("should have one argument, a name", () => {
     expect(greet.length).toBe(1);
   });
   it("should greet the passed in name with a welcome message", () => {
@@ -21,7 +21,7 @@ describe("greet()", () => {
 });
 
 describe("sayGoodbye()", () => {
-  it("should have one argument", () => {
+  it("should have one argument, a name", () => {
     expect(sayGoodbye.length).toBe(1);
   });
   it("should say goodbye to the passed in name", () => {
@@ -30,7 +30,7 @@ describe("sayGoodbye()", () => {
 });
 
 describe("addTwoNums()", () => {
-  it("should have two arguments", () => {
+  it("should have two arguments, both are numbers", () => {
     expect(addTwoNums.length).toBe(2);
   });
   it("should add two numbers together and return the value", () => {
@@ -39,7 +39,7 @@ describe("addTwoNums()", () => {
 });
 
 describe("subtractTwoNums()", () => {
-  it("should have two arguments", () => {
+  it("should have two arguments, both are numbers", () => {
     expect(subtractTwoNums.length).toBe(2);
   });
   it("should subtract two numbers and return the value", () => {
@@ -48,7 +48,7 @@ describe("subtractTwoNums()", () => {
 });
 
 describe("addOrSubtract()", () => {
-  it("should have three arguments", () => {
+  it("should have three arguments, a callback function and two numbers", () => {
     expect(addOrSubtract.length).toBe(3);
   });
   it("should add two numbers together or subtract them and return the value", () => {
@@ -91,7 +91,7 @@ describe("greetOrSayGoodbyeToAll()", () => {
 });
 
 describe("sizeMeUp()", () => {
-  it("should have one argument", () => {
+  it("should have one argument, a number", () => {
     expect(sizeMeUp.length).toBe(1);
   });
   it('should return "Too small" if the number is less than 10', () => {
