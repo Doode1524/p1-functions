@@ -14,6 +14,8 @@ const greetOrSayGoodbyeToAll = () => {}
 
 const sizeMeUp = () => {}
 
+const sortNumbers = () => {}
+
 
 /// THIS IS FOR TESTING PURPOSES ///
 ///        DO NOT DELETE         ///
@@ -25,7 +27,8 @@ const functions = {
     addOrSubtract,
     greetOrSayGoodbye,
     greetOrSayGoodbyeToAll,
-    sizeMeUp
+    sizeMeUp,
+    sortNumbers,
 }
 module.exports = functions
 ///////////////////////////////////

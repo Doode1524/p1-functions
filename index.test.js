@@ -7,6 +7,7 @@ const {
   subtractTwoNums,
   greetOrSayGoodbye,
   greetOrSayGoodbyeToAll,
+  sortNumbers,
 } = require("./index.js");
 // const functions = require('./index.js');
 
@@ -98,5 +99,27 @@ describe("sizeMeUp()", () => {
   });
   it('should return "Damn Foley!!" if the number is greater than 10', () => {
     expect(sizeMeUp(11)).toBe("Damn Foley!!");
+  });
+});
+
+describe("sortNumbers()", () => {
+  let nums = [2, 11, 5, 4, 3, 1, 9, 7, 6, 8];
+  it("should have two arguments, an array of numbers and an order method ('ascending' or 'descending')", () => {
+    expect(sortNumbers.length).toBe(2);
+  });
+  it('should return an array of sorted numbers if order method is "ascending"', () => {
+    expect(sortNumbers(nums, "ascending")).toStrictEqual([
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 11,
+    ]);
+  });
+  it('should return an array of reverse sorted numbers if order method is "descending"', () => {
+    expect(sortNumbers(nums, "descending")).toStrictEqual([
+      11, 9, 8, 7, 6, 5, 4, 3, 2, 1,
+    ]);
+  });
+  it("should return an error message if invalid order method is passed in", () => {
+    expect(sortNumbers(nums, "intentionally invalid method")).toBe(
+      "Please enter a valid method"
+    );
   });
 });
