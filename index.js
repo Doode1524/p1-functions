@@ -1,10 +1,14 @@
 const greet = () => {}
 
+const sayGoodbye = () => {}
+
 const addTwoNums = () => {}
 
 const subtractTwoNums = () => {}
 
 const addOrSubtract = () => {}
+
+const greetOrSayGoodbye = () => {}
 
 const sizeMeUp = () => {}
 
@@ -13,9 +17,11 @@ const sizeMeUp = () => {}
 ///        DO NOT DELETE         ///
 const functions = {
     greet,
+    sayGoodbye,
     addTwoNums,
     subtractTwoNums,
     addOrSubtract,
+    greetOrSayGoodbye,
     sizeMeUp
 }
 module.exports = functions

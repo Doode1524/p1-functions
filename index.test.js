@@ -1,9 +1,11 @@
 const {
   greet,
+  sayGoodbye,
   sizeMeUp,
   addOrSubtract,
   addTwoNums,
   subtractTwoNums,
+  greetOrSayGoodbye,
 } = require("./index.js");
 // const functions = require('./index.js');
 
@@ -15,6 +17,15 @@ describe("greet()", () => {
     expect(greet("Joey")).toBe("Hello, Joey. Welcome to JavaScript!");
   });
 });
+
+describe("sayGoodbye()", () => {
+    it("should have one argument", () => {
+      expect(sayGoodbye.length).toBe(1);
+    });
+    it("should say goodbye to the passed in name", () => {
+      expect(sayGoodbye("Joey")).toBe("Goodbye, Joey!");
+    });
+  });
 
 describe("addTwoNums()", () => {
   it("should have two arguments", () => {
@@ -43,6 +54,16 @@ describe("addOrSubtract()", () => {
     expect(addOrSubtract(subtractTwoNums, 1, 2)).toBe(-1);
   });
 });
+
+describe("greetOrSayGoodbye()", () => {
+    it("should have two arguments, a callback function and a name", () => {
+      expect(greetOrSayGoodbye.length).toBe(2);
+    });
+    it("should greet or say goodbye to the passed in name", () => {
+      expect(greetOrSayGoodbye(greet, "Joey")).toBe("Hello, Joey. Welcome to JavaScript!");
+      expect(greetOrSayGoodbye(sayGoodbye, "Joey")).toBe("Goodbye, Joey!");
+    });
+  });
 
 describe("sizeMeUp()", () => {
   it("should have one argument", () => {
