@@ -6,6 +6,7 @@ const {
   addTwoNums,
   subtractTwoNums,
   greetOrSayGoodbye,
+  greetOrSayGoodbyeToAll,
 } = require("./index.js");
 // const functions = require('./index.js');
 
@@ -19,13 +20,13 @@ describe("greet()", () => {
 });
 
 describe("sayGoodbye()", () => {
-    it("should have one argument", () => {
-      expect(sayGoodbye.length).toBe(1);
-    });
-    it("should say goodbye to the passed in name", () => {
-      expect(sayGoodbye("Joey")).toBe("Goodbye, Joey!");
-    });
+  it("should have one argument", () => {
+    expect(sayGoodbye.length).toBe(1);
   });
+  it("should say goodbye to the passed in name", () => {
+    expect(sayGoodbye("Joey")).toBe("Goodbye, Joey!");
+  });
+});
 
 describe("addTwoNums()", () => {
   it("should have two arguments", () => {
@@ -56,14 +57,37 @@ describe("addOrSubtract()", () => {
 });
 
 describe("greetOrSayGoodbye()", () => {
-    it("should have two arguments, a callback function and a name", () => {
-      expect(greetOrSayGoodbye.length).toBe(2);
-    });
-    it("should greet or say goodbye to the passed in name", () => {
-      expect(greetOrSayGoodbye(greet, "Joey")).toBe("Hello, Joey. Welcome to JavaScript!");
-      expect(greetOrSayGoodbye(sayGoodbye, "Joey")).toBe("Goodbye, Joey!");
-    });
+  it("should have two arguments, a callback function and a name", () => {
+    expect(greetOrSayGoodbye.length).toBe(2);
   });
+  it("should greet or say goodbye to the passed in name", () => {
+    expect(greetOrSayGoodbye(greet, "Joey")).toBe(
+      "Hello, Joey. Welcome to JavaScript!"
+    );
+    expect(greetOrSayGoodbye(sayGoodbye, "Joey")).toBe("Goodbye, Joey!");
+  });
+});
+
+describe("greetOrSayGoodbyeToAll()", () => {
+  let names = ["Joey", "Yin", "Kogn", "Foley"];
+  it("should have two arguments, a callback function and an array of names", () => {
+    expect(greetOrSayGoodbyeToAll.length).toBe(2);
+  });
+  it("should return a new array with greeting or goodbye messages to every name in the array", () => {
+    expect(greetOrSayGoodbyeToAll(greet, names)).toStrictEqual([
+      "Hello, Joey. Welcome to JavaScript!",
+      "Hello, Yin. Welcome to JavaScript!",
+      "Hello, Kogn. Welcome to JavaScript!",
+      "Hello, Foley. Welcome to JavaScript!",
+    ]);
+    expect(greetOrSayGoodbyeToAll(sayGoodbye, names)).toStrictEqual([
+      "Goodbye, Joey!",
+      "Goodbye, Yin!",
+      "Goodbye, Kogn!",
+      "Goodbye, Foley!",
+    ]);
+  });
+});
 
 describe("sizeMeUp()", () => {
   it("should have one argument", () => {

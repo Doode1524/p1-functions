@@ -10,6 +10,8 @@ const addOrSubtract = () => {}
 
 const greetOrSayGoodbye = () => {}
 
+const greetOrSayGoodbyeToAll = () => {}
+
 const sizeMeUp = () => {}
 
 
@@ -22,6 +24,7 @@ const functions = {
     subtractTwoNums,
     addOrSubtract,
     greetOrSayGoodbye,
+    greetOrSayGoodbyeToAll,
     sizeMeUp
 }
 module.exports = functions
