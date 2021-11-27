@@ -1,3 +1,5 @@
+const greet = () => {}
+
 const addTwoNums = () => {}
 
 const subtractTwoNums = () => {}
@@ -10,6 +12,7 @@ const sizeMeUp = () => {}
 /// THIS IS FOR TESTING PURPOSES ///
 ///        DO NOT DELETE         ///
 const functions = {
+    greet,
     addTwoNums,
     subtractTwoNums,
     addOrSubtract,
